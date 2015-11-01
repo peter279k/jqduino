@@ -46,7 +46,7 @@
 		&lt;wa-led id=&quot;led&quot; pin=&quot;10&quot;&gt;&lt;/wa-led&gt;
 	&lt;/web-arduino&gt;
 	//set the image css
-	<style>
+	&lt;style&gt;
 		#light img {
 			width:100%;
 			display:none;
@@ -57,9 +57,9 @@
 		#light.on img:last-child {
 			display:inline-block;
 		}
-	</style>
+	&lt;/style&gt;
 	//Using native JS light the led
-	<script>
+	&lt;script&gt;
 		window.addEventListener('WebComponentsReady', function () {
 			var board = document.getElementById('board'),
 			light = document.getElementById('light');
@@ -80,9 +80,9 @@
 			});
 
 		}, false);
-	</script>
+	&lt;/script&gt;
 	//I want to use jQuery.
-	<script>
+	&lt;script&gt;
 		window.addEventListener('WebComponentsReady', function () {
 			var board = document.getElementById('board'),
 
@@ -104,7 +104,7 @@
 			});
 
 		}, false);
-	</script>
+	&lt;/script&gt;
 </code>
 </pre>
 
