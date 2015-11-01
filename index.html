@@ -45,66 +45,68 @@
 	&lt;web-arduino id=&quot;board&quot; device=&quot;你的 device 名稱&quot;&gt;
 		&lt;wa-led id=&quot;led&quot; pin=&quot;10&quot;&gt;&lt;/wa-led&gt;
 	&lt;/web-arduino&gt;
-	//set the image css
-	&lt;style&gt;
-		#light img {
-			width:100%;
-			display:none;
-		}
-		#light.off img:first-child {
-			display:inline-block;
-		}
-		#light.on img:last-child {
-			display:inline-block;
-		}
-	&lt;/style&gt;
+</code>
+</pre>
+<pre>
+<code class="css">
+	/*set the image css*/
+	#light img {
+		width:100%;
+		display:none;
+	}
+	#light.off img:first-child {
+		display:inline-block;
+	}
+	#light.on img:last-child {
+		display:inline-block;
+	}
+</code>
+</pre>
+<pre>
+<code class="js">
 	//Using native JS light the led
-	&lt;script&gt;
-		window.addEventListener('WebComponentsReady', function () {
-			var board = document.getElementById('board'),
-			light = document.getElementById('light');
+	window.addEventListener('WebComponentsReady', function () {
+		var board = document.getElementById('board'),
+		light = document.getElementById('light');
 
-			board.on('ready',function ready() {
-				var led = document.getElementById('led');
+		board.on('ready',function ready() {
+			var led = document.getElementById('led');
 
-				light.addEventListener('click', function() {
-					if(light.className == 'on') {
-						led.off();     // 讓 LED 熄滅
-						light.className = 'off';
-					}
-					else {
-						led.on();     // 讓 LED 亮起
-						light.className = 'on';
-					}
-				}, false);
-			});
+			light.addEventListener('click', function() {
+				if(light.className == 'on') {
+					led.off();     // 讓 LED 熄滅
+					light.className = 'off';
+				}
+				else {
+					led.on();     // 讓 LED 亮起
+					light.className = 'on';
+				}
+			}, false);
+		});
 
-		}, false);
-	&lt;/script&gt;
+	}, false);
 	//I want to use jQuery.
-	&lt;script&gt;
-		window.addEventListener('WebComponentsReady', function () {
-			var board = document.getElementById('board'),
+	window.addEventListener('WebComponentsReady', function () {
+		var board = document.getElementById('board'),
 
-			board.on('ready',function ready() {
-				var led = document.getElementById('led');
-				
-				//This code is too awful ! !
-				$("#light").click(function(event) {
-					event.preventDefault();
-					if(light.className == 'on') {
-						led.off();     // 讓 LED 熄滅
-						light.className = 'off';
-					}
-					else {
-						led.on();     // 讓 LED 亮起
-						light.className = 'on';
-					}
-				});
+		board.on('ready',function ready() {
+			var led = document.getElementById('led');
+			
+			//This code is too awful ! !
+			$("#light").click(function(event) {
+				event.preventDefault();
+				if(light.className == 'on') {
+					led.off();     // 讓 LED 熄滅
+					light.className = 'off';
+				}
+				else {
+					led.on();     // 讓 LED 亮起
+					light.className = 'on';
+				}
 			});
+		});
 
-		}, false);
-	&lt;/script&gt;
+	}, false);
 </code>
 </pre>
 
@@ -112,7 +114,7 @@
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>I think develop a plugin to access Webduino. It's very awesome!</h3>
 
 <pre>
-<code class="js">
+<code class="html">
 	&lt;!--just inclue one additional plugin and jQery core libraries--&gt;
 	&lt;--include some associate libraries.--&gt;
 	&lt;script src=&quot;https://webduino.io/components/webcomponentsjs/webcomponents.js&quot;&gt;&lt;/script&gt;
@@ -120,29 +122,31 @@
 	&lt;script src=&quot;js/jqduino.js&quot;&gt;&lt;/script&gt;
 	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/web-arduino.html&quot; /&gt;
 	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/wa-led.html&quot; /&gt;
-	//And you can use following code !
-	&lt;script&gt;
-	$(function() {
-		$("#board").attr("device", "3KLK");
-			$(document).web_components_ready(function () {
-				$("#board").board_ready(function() {
-					$("#light").click(function(event) {
-					event.preventDefault();
-					if($("#light").attr("class") == "on") {
-						$("#led").set_led("off");
-						$("#light").attr("class", "off");
-					}
-					else {
-						$("#led").set_led("on");
-						$("#light").attr("class", "on");
-					}
+</code>
+</pre>
+<pre>
+	<code class="js">
+		//And you can use following code !
+		$(function() {
+			$("#board").attr("device", "3KLK");
+				$(document).web_components_ready(function () {
+					$("#board").board_ready(function() {
+						$("#light").click(function(event) {
+						event.preventDefault();
+						if($("#light").attr("class") == "on") {
+							$("#led").set_led("off");
+							$("#light").attr("class", "off");
+						}
+						else {
+							$("#led").set_led("on");
+							$("#light").attr("class", "on");
+						}
+					});
 				});
 			});
-		});
 	
-	});
-	&lt;script&gt;
-</code>
+		});
+	</code>
 </pre>
 
 <h3>
