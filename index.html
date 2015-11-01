@@ -113,34 +113,35 @@
 
 <pre>
 <code class="js">
-	//just inclue one additional plugin and jQery core libraries!
-	//include some associate libraries.
-	
+	&lt;!--just inclue one additional plugin and jQery core libraries--&gt;
+	&lt;--include some associate libraries.--&gt;
 	&lt;script src=&quot;https://webduino.io/components/webcomponentsjs/webcomponents.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;//code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;js/jqduino.js&quot;&gt;&lt;/script&gt;
 	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/web-arduino.html&quot; /&gt;
 	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/wa-led.html&quot; /&gt;
 	//And you can use following code !
+	&lt;script&gt;
 	$(function() {
 		$("#board").attr("device", "3KLK");
-		$(document).web_components_ready(function () {
-			$("#board").board_ready(function() {
-				$("#light").click(function(event) {
-				event.preventDefault();
-				if($("#light").attr("class") == "on") {
-					$("#led").set_led("off");
-					$("#light").attr("class", "off");
-				}
-				else {
-					$("#led").set_led("on");
-					$("#light").attr("class", "on");
-				}
+			$(document).web_components_ready(function () {
+				$("#board").board_ready(function() {
+					$("#light").click(function(event) {
+					event.preventDefault();
+					if($("#light").attr("class") == "on") {
+						$("#led").set_led("off");
+						$("#light").attr("class", "off");
+					}
+					else {
+						$("#led").set_led("on");
+						$("#light").attr("class", "on");
+					}
+				});
 			});
 		});
-	});
 	
-});
+	});
+	&lt;script&gt;
 </code>
 </pre>
 
