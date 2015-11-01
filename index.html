@@ -34,17 +34,17 @@
 <pre>
 <code class="html">
 	//include some associate libraries.
-	<script src="https://webduino.io/components/webcomponentsjs/webcomponents.js"></script>
-	<link rel='import' href='https://webduino.io/components/webduino/web-arduino.html' />
-	<link rel='import' href='https://webduino.io/components/webduino/wa-led.html' />
+	&lt;script src=&quot;https://webduino.io/components/webcomponentsjs/webcomponents.js&quot;&gt;&lt;/script&gt;
+	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/web-arduino.html&quot; /&gt;
+	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/wa-led.html&quot; /&gt;
 	//add Webduino tag and led tag.
-	<div id='light' class="off">
-		<img src='http://i.imgur.com/T5H4MHE.png'></img>
-		<img src='http://i.imgur.com/8qFj2Ou.png'></img>
-	</div>
-	<web-arduino id="board" device='你的 device 名稱'>
-		<wa-led id='led' pin='10'></wa-led>
-	</web-arduino>
+	&lt;div id=&quot;light&quot; class=&quot;off&quot;&gt;
+		&lt;img src=&quot;http://i.imgur.com/T5H4MHE.png&quot; /&gt;
+		&lt;img src=&quot;http://i.imgur.com/8qFj2Ou.png&quot; /&gt;
+	&lt;/div&gt;
+	&lt;web-arduino id=&quot;board&quot; device=&quot;你的 device 名稱&quot;&gt;
+		&lt;wa-led id=&quot;led&quot; pin=&quot;10&quot;&gt;&lt;/wa-led&gt;
+	&lt;/web-arduino&gt;
 	//set the image css
 	<style>
 		#light img {
@@ -116,11 +116,11 @@
 	//just inclue one additional plugin and jQery core libraries!
 	//include some associate libraries.
 	
-	&lt;script src="https://webduino.io/components/webcomponentsjs/webcomponents.js"&gt;&lt;/script&gt;
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="js/jqduino.js"></script>
-	<link rel='import' href='https://webduino.io/components/webduino/web-arduino.html' />
-	<link rel='import' href='https://webduino.io/components/webduino/wa-led.html' />
+	&lt;script src=&quot;https://webduino.io/components/webcomponentsjs/webcomponents.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;//code.jquery.com/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;js/jqduino.js&quot;&gt;&lt;/script&gt;
+	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/web-arduino.html&quot; /&gt;
+	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/wa-led.html&quot; /&gt;
 	//And you can use following code !
 	$(function() {
 		$("#board").attr("device", "3KLK");
