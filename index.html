@@ -25,19 +25,25 @@
       <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to jqduino's world.</h3>
 
-<p>Read more info : <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>
-	This is Webduino official website : <a href="https://webduino.io/tutorials.html">Webduino sample projects</a>
+<p>Read more info : 
+	<a href="https://github.com/peter279k/jqduino">READNE.md</a>
+</p>
+<p>
+	This is Webduino official website : <a href="https://webduino.io">Webduino official website</a>
+</p>
+<p>
+	This is Webduino official website's project : <a href="https://webduino.io/tutorials.html">Webduino sample projects</a>
 </p>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Here is the <a href="https://webduino.io/tutorials/tutorial-01-led.html">project</a> about light one led sample code: </h3>
 <pre>
 <code class="html">
-	//include some associate libraries.
+	&lt;!--include some associate libraries.--&gt;
 	&lt;script src=&quot;https://webduino.io/components/webcomponentsjs/webcomponents.js&quot;&gt;&lt;/script&gt;
 	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/web-arduino.html&quot; /&gt;
 	&lt;link rel=&quot;import&quot; href=&quot;https://webduino.io/components/webduino/wa-led.html&quot; /&gt;
-	//add Webduino tag and led tag.
+	&lt;!--add Webduino tag and led tag.--&gt;
 	&lt;div id=&quot;light&quot; class=&quot;off&quot;&gt;
 		&lt;img src=&quot;http://i.imgur.com/T5H4MHE.png&quot; /&gt;
 		&lt;img src=&quot;http://i.imgur.com/8qFj2Ou.png&quot; /&gt;
@@ -85,6 +91,7 @@
 		});
 
 	}, false);
+
 	//I want to use jQuery.
 	window.addEventListener('WebComponentsReady', function () {
 		var board = document.getElementById('board'),
